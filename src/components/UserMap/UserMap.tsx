@@ -17,7 +17,6 @@ const UserMap: FC<IProps> = ({ userId }) => {
 
   const userList = location == "/savedUsers" ? savedUsers : users;
   const user = userList.filter((user) => user.login.uuid == userId)[0];
-  console.log("Hello");
 
   const position = {
     lat: +user.location.coordinates.latitude,
