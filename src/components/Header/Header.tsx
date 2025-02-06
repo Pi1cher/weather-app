@@ -15,7 +15,7 @@ const Header = () => {
       <button
         disabled={location == "/users"}
         className={`${css.BackButton} ${css.HeaderButtons}`}
-        onClick={() => navigate(-1)}
+        onClick={() => navigate("users")}
       >
         Back
       </button>
