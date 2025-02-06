@@ -45,3 +45,10 @@
     scale: 1.05;
     color: #2e2c2c;
 }
+
+@media (max-width: 768px) {
+    .Header > h1 {
+        width: 80%;
+        text-align: center;
+    }
+}

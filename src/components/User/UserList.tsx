@@ -19,7 +19,6 @@ const UserList = () => {
   const handleLoadButton = () => {
     setResults((prevResults) => (parseInt(prevResults) + 8).toString());
   };
-
   if (location == "/users") {
     useEffect(() => {
       dispatch(userListActions.getAll({ results, seed }));

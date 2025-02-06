@@ -7,7 +7,7 @@ interface IState {
 }
 
 const initialState: IState = {
-  savedUsers: JSON.parse(localStorage.getItem("savedUsers")) || "[]",
+  savedUsers: JSON.parse(localStorage.getItem("savedUsers")) || [],
 };
 
 const saveUser = createAsyncThunk<IState, { user: IUser }>(
@@ -17,14 +17,12 @@ const saveUser = createAsyncThunk<IState, { user: IUser }>(
       const existingUsers = JSON.parse(
         localStorage.getItem("savedUsers") || "[]",
       );
-      if (!Array.isArray(existingUsers))
-        throw new Error("Invalid data in localStorage");
 
       const userExists = existingUsers.some(
         (existingUser: IUser) => existingUser.login.uuid === user.login.uuid,
       );
       if (userExists) {
-        return { savedUsers: existingUsers }; // Return current state without modification
+        return { savedUsers: existingUsers };
       }
 
       const updatedUsers = [...existingUsers, user];
@@ -43,9 +41,6 @@ const deleteUser = createAsyncThunk<IState, { userId: string }>(
       const existingUsers = JSON.parse(
         localStorage.getItem("savedUsers") || "[]",
       );
-      if (!Array.isArray(existingUsers))
-        throw new Error("Invalid data in localStorage");
-
       const updatedUsers = existingUsers.filter(
         (user: IUser) => user.login.uuid !== userId,
       );
