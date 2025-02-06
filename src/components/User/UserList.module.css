@@ -1,0 +1,36 @@
+.UserList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px,300px));
+    column-gap: 40px;
+    row-gap: 40px;
+
+    max-width: 90%;
+    margin-top: 120px;
+    padding-bottom: 200px;
+
+    position: relative;  /* Required to position the button */
+}
+
+.LoadButton {
+    position: absolute;
+    left: 50%;
+    bottom: 90px;
+    transform: translateX(-50%);
+    padding: 5px;
+
+    margin: 5px;
+    font-family: "Montserrat", sans-serif, serif;
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid #79fdd0;
+    background-color: #a5fd7a;
+    color: #605e63;
+    transition: 0.5s;
+
+}
+
+.LoadButton:hover {
+    scale: 1.05;
+    color: #2e2c2c;
+}

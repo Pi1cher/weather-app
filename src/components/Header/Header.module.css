@@ -1,0 +1,47 @@
+.Header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(99, 211, 176) 0%, rgb(122, 184, 87) 100%);
+    border-radius: 0 0 85% 85% / 30%;
+    border-bottom: 5px #3674B5 solid;
+
+    height: 80px;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.BackButton {
+    position: absolute;
+    left: 5%;
+}
+
+.BackButton:disabled{
+    visibility: hidden;
+}
+
+.SavedUsers {
+    position: absolute;
+    right: 2%;
+}
+
+.HeaderButtons {
+    margin: 5px;
+    padding: 5px;
+    font-family: "Montserrat", sans-serif, serif;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid #79fdd0;
+    background-color: #ae7afd;
+    color: #c6bfcd;
+    transition: 0.5s;
+}
+
+.HeaderButtons:hover {
+    scale: 1.05;
+    color: #2e2c2c;
+}

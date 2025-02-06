@@ -1,0 +1,132 @@
+.UserCard {
+    min-width: 240px;
+    min-height: 240px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    background: white;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.UserCard:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.Email {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Location {
+    display: flex;
+    align-items: center;
+}
+
+.Avatar {
+    border-radius: 50%;
+    border: 10px solid white;
+    transition: 0.5s;
+}
+
+.UserCard:hover .Avatar {
+    scale: 1.1;
+    transition: 0.5s;
+    margin-top: -15px;
+}
+
+.AvatarTexture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 20px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(168,255,120,1) 0%, rgba(120,255,214,1) 100%);
+    width: 100%;
+    margin-bottom: 48px;
+
+    padding-top: 20px;
+
+
+
+
+    height: 100px
+}
+
+.WeatherIcon {
+    scale: 0.5;
+    margin: -30px;
+    mix-blend-mode: hard-light;
+}
+
+.WeatherDescription {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(128,128,128,0.5);
+    border-radius: 20px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.UserButtons {
+    margin: 5px;
+    font-family: "Montserrat", sans-serif, serif;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid #79fdd0;
+    background-color: #a5fd7a;
+    color: #605e63;
+    transition: 0.5s;
+
+}
+
+.UserButtons:hover {
+    scale: 1.05;
+    color: #2e2c2c;
+}
+
+.UserButtons:active {
+    background-color: #74c15b;
+}
+
+
+
+.SaveButton {
+    display: flex;
+    align-items: center;
+}
+
+.SaveButton:disabled {
+    display: none;
+}
+
+.DeleteButton {
+    display: flex;
+    align-items: center;
+}
+
+.DeleteButton:disabled {
+    display: none;
+}
+
+.WeatherButton {
+    display: flex;
+    align-items: center;
+}
+
+.ButtonsPanel {
+    display: flex;
+}
+
